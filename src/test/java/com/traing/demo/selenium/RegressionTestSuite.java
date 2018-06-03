@@ -16,10 +16,10 @@ public class RegressionTestSuite extends Hooks {
     @Test
     public void filterByReviewTest() {
         locators.doSearch("nike");
-        locators.selectFilter("5only");
+        locators.selectFilter("1only");
         List<Double> actualList = locators.getAllReviewRating();
         System.out.println(actualList);
-        assertThat(actualList, everyItem(greaterThan(5.0)));
+        assertThat(actualList, everyItem(greaterThan(2.0)));
 
     }
 }
