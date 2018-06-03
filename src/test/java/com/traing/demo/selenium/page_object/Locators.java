@@ -34,8 +34,12 @@ public class Locators extends DriverFactory {
         List<Double> collectedRatings = new ArrayList<>();
         List<WebElement> ratings = driver.findElements(By.cssSelector(".ac-star-rating"));
         for (WebElement rating : ratings) {
+            //System.out.println(rating.getText());
+           // System.out.println("------------------------------------------------");
             String ratingInString = rating.getAttribute("data-star-rating");
+           // System.out.println(ratingInString);
             Double raingInDouble = Double.parseDouble(ratingInString);
+            //System.out.println(raingInDouble);
             collectedRatings.add(raingInDouble);
         }
         return collectedRatings;

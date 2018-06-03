@@ -18,6 +18,7 @@ public class RegressionTestSuite extends Hooks {
         locators.doSearch("nike");
         locators.selectFilter("5only");
         List<Double> actualList = locators.getAllReviewRating();
+        System.out.println(actualList);
         assertThat(actualList, everyItem(greaterThan(5.0)));
 
     }
